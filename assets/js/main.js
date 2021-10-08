@@ -1,3 +1,18 @@
+(function() {
+    var rotate;
+  
+    rotate = function() {
+        return $('.card:first-child').fadeOut(250, 'swing', function() {
+            return $('.card:first-child').appendTo('.container').hide();
+        }).fadeIn(250, 'swing');
+    };
+  
+    $('.fi-sr-forward').click(function() {
+        return rotate();
+      });
+}).call(this);
+
+
 (function($) {
 
 	var	$window = $(window),
@@ -128,3 +143,4 @@
 				}
 			});
 })(jQuery);
+
